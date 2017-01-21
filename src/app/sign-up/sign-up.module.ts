@@ -19,12 +19,10 @@ import { MaterialModule } from '@angular/material';
   exports: [
     SignUpComponent,
     SignUpDialogComponent
-  ]
-  //entryComponents: [SignUpDialogComponent]
+  ],
+  entryComponents: [SignUpDialogComponent]
 })
 export class SignUpModule {
-  constructor() {
-    console.log("SignUpModule constructor")
-  }
+
 }
 
