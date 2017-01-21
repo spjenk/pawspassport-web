@@ -1,11 +1,10 @@
 <!-- Menu Bar -->
 <div class="ui large top fixed menu">
   <div class="ui container">
-    <a class="active item">Home</a>
-    <a class="item">Make a booking</a>
-    <a class="item">Update details</a>
-    <a class="item">My Account</a>
-    <a class="item">Admin</a>
+    <a routerLink="home" class="active item">Home</a>
+    <a routerLink="availability" class="item">Availability</a>
+    <a routerLink="details" class="item">My Details</a>
+    <a routerLink="admin" class="item">Admin</a>
     <div class="right menu">
       <div class="item">
         <a class="ui button">Log in</a>
@@ -21,7 +20,7 @@
   {{title}}
 </h1>
 
-<app-availability>Loading...</app-availability>
+<router-outlet></router-outlet>
 
 
 

@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 
 import { SignUpModule } from './sign-up/sign-up.module'
 import { AvailabilityModule } from "./availability/availability.module";
+import {routing} from "./app.routes";
 
 
 
@@ -16,8 +17,8 @@ import { AvailabilityModule } from "./availability/availability.module";
   imports: [
     BrowserModule,
     HttpModule,
-    SignUpModule,
-    AvailabilityModule
+    routing,
+    SignUpModule
   ],
   providers: [ ],
   bootstrap: [AppComponent]
