@@ -1,29 +1,25 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-import { MaterialModule } from '@angular/material';
 
 import { AppComponent } from './app.component';
-import { AvailabilityComponent } from './availability/availability.component';
-import { SignUpComponent } from './sign-up/sign-up.component';
-import { SignUpDialogComponent } from './sign-up-dialog/sign-up-dialog.component';
+
+import { SignUpModule } from './sign-up/sign-up.module'
+import { AvailabilityModule } from "./availability/availability.module";
+
+
 
 @NgModule({
   declarations: [
-    AppComponent,
-    AvailabilityComponent,
-    SignUpComponent,
-    SignUpDialogComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule,
     HttpModule,
-    MaterialModule.forRoot(),
+    SignUpModule,
+    AvailabilityModule
   ],
-  entryComponents: [SignUpDialogComponent],
   providers: [ ],
-  bootstrap: [AppComponent, AvailabilityComponent, SignUpComponent]
+  bootstrap: [AppComponent]
 })
 export class AppModule { }

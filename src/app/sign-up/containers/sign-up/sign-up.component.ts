@@ -9,16 +9,13 @@ import {SignUpDialogComponent} from "../sign-up-dialog/sign-up-dialog.component"
 })
 export class SignUpComponent {
 
-  dialogRef: MdDialogRef<any>;
+  constructor(public _dialog: MdDialog) {
 
-  constructor(private _dialog: MdDialog) { }
+  }
 
   openDialog() {
-    this.dialogRef = this._dialog.open(SignUpDialogComponent);
-
-    this.dialogRef.afterClosed().subscribe(result => {
-      this.dialogRef = null;
-    });
+    let dialogRef: MdDialogRef<any>;
+    dialogRef = this._dialog.open(SignUpDialogComponent);
   }
 
 }
